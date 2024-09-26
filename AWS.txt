@@ -103,3 +103,6 @@ In EBS archive concept
 Connect 1 EC2 to a EBS
 how to get snapshot of EBS 
 
+
+
+

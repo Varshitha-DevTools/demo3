@@ -1,5 +1,5 @@
 Definition of cloud computing: CC is the on demand delivery of compute ,database storage, apps & other IT resources(Data storage, VMs, Networks, servers).
-Ex: Gmail ,Netflix ,Dropbix.
+Ex: Gmail ,Netflix
 
 Cloud services - ec2, s3, lambda,
 

@@ -1,0 +1,105 @@
+Definition of cloud computing: CC is the on demand delivery of compute ,database storage, apps & other IT resources(Data storage, VMs, Networks, servers).
+Ex: Gmail ,Netflix ,Dropbix.
+
+Cloud services - ec2, s3, lambda,
+
+Compute - ec2 IAM
+Storage - s3
+Data out - database
+Networking - 
+
+=================To Recognize================
+ROOT user - Root user id
+IAM user - username
+
+2002 int launched
+2003 amazon infra
+2006 sqs
+2007 ec2, sqs, s3 bucket
+
+AZs are selected based on:
+cost 
+some services are not present in all AZs
+
+In cloud - customers
+of the cloud - Cloud service provider
+
+IAM (Identity & Access Management) is a web a service that helps you to securely control access to AWS resources.
+""IAM contains"" 
+1. Root user - user admin (no restrictions)
+2. IAM user - user with restrictions
+3. Groups - groups contain only users , these users can be in 1 or many groups.
+
+""IAM permissions:""
+user & groups can be assigned Json documents called policies
+IAM policies will be in json format
+A user must be assigned with least permission at first 
+
+Json-doc format Structure
+"Version": "--"
+"Statement":[
+     {	
+	"Effect": "Allow",
+	"Action": "ec2:Describe*",
+	"Resource": "*"
+     }
+]
+
+"""""""""""""How to mention to specific user we use principal"""""""""""""""
+"Principal": {
+	"AWS":["arn:aws:iam:::123456789012:root"]	
+}
+
+Authorization: To which we are responsible
+Authentication: In what way we are signing / logging in
+
+MFA- Multi Factor Authentication.
+
+""""""""AWS can be accessed through"""""""""
+1. AWS console (password and MFAs)
+2. AS CLI (access keys , access keys are generated in console)
+	Access key consists - Access key id(username), Secrete access key(password)
+3. AWS SDK (code perspective, used by developers, language "Java,python" specific, programmatically how to access services)
+
+'''''''''AWS CLI'''''''''
+Its a where we interact with AWS through commands
+
+
+'''''''''IAM roles for services'''''''''
+EC2
+lambda functions 
+
+'''''''''''IAM Security Tools'''''''''
+1. IAM Credentials reports(Accounts level) 
+	- gives all user accounts of a group details like passwords when logged in etc.
+2. IAM Access advisor(User level) 
+	- gives details about each user separately.
+
+''''''''''''''''Best practices of IAM:''''''''''
+Don't use root user always to access AWS, services except during account creation.
+MFA
+Roles creation and assigning permissions
+IAM Security Tools
+
+aws --version
+aws configure
+
+
+--------------------------------------------------------------------EC2----------------------------------------------------------
+
+EC2
+considered as VM let it make as a server.
+
+
+
+''''''Activity ''''''
+Connect two EC2 instances and verify in AWS itself
+
+
+
+''''''Activity done''''''
+In EBS recycle bin concept
+In EBS archive concept
+Connect 1 EC2 to a EBS
+how to get snapshot of EBS 
+

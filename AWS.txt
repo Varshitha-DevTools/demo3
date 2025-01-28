@@ -3,7 +3,7 @@ Definition of cloud computing: CC is the on demand delivery of compute ,database
 
 
 
-Compute - ec2 IAM
+Compute - ec2 IAm
 Storage - s3
 Data out - database
 Networking - 

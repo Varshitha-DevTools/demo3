@@ -1,0 +1,37 @@
+name: call
+on: 
+    workflow_dispatch:
+
+jobs:
+    docker:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Docker Build
+              run: echo docker build -t ${{vars.CONTAINER_REGISTRY}}/${{vars.DOCKER_USERNAME}}${{vars.IMAGE_NAME}}:latest
+
+
+            - name: Docker login
+              run: echo docker login --username=${{vars.DOCKER_USERNAME}} --password=${{secrets.DOCKER_PASSWORD}} 
+
+
+            - name: Docker Publish
+              run: echo docker push ${{vars.CONTAINER_REGISTRY}}/${{vars.DOCKER_USERNAME}}/${{vars.IMAGE_NAME}}:latest
+              
+    deploy:
+        needs:
+         docker
+         
+        runs-on: ubuntu-latest
+        steps:
+            - name: Docker Run
+              timeout-minutes: 2
+              
+              run: |
+                   echo docker run -d -p 8080:80 ${{vars.CONTAINER_REGISTRY}}/${{vars.DOCKER_USERNAME}}/${{vars.IMAGE_NAME}}:latest
+                   sleep 500s
+
+
+
+    test-build:
+        uses: ./.github/workflows/reusable.yml
+        

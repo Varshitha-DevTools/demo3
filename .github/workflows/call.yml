@@ -34,4 +34,7 @@ jobs:
 
     test-build:
         uses: ./.github/workflows/reusable.yml
+
+    deploy2:
+        uses: ./.github/workflows/reusable.yml    
         

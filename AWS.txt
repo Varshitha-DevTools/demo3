@@ -1,4 +1,4 @@
-Definition of cloud computing: CC is the on demand delivery of compute ,database storage, apps & other IT resources(Data storage, VMs, Networks, servers).
+&&&Definition of cloud computing: CC is the on demand delivery of compute ,database storage, apps & other IT resources(Data storage, VMs, Networks, servers).
 
 
 
@@ -102,6 +102,7 @@ In EBS recycle bin concept
 In EBS archive concept
 Connect 1 EC2 to a EBS
 how to get snapshot of EBS 
+
 
 
 
